@@ -85,7 +85,7 @@ WHERE The_Loai ILIKE 'Lập trình';
 
 DELETE
 FROM Payments
-WHERE (SELECT Ma_DK FROM Enrollments WHERE Ma_HV ILIKE 'S001') = Ma_DK;
+WHERE Ma_DK IN (SELECT Ma_DK FROM Enrollments WHERE Ma_HV ILIKE 'S001') ;
 
 DELETE
 FROM Enrollments
